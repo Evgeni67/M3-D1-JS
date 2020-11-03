@@ -131,8 +131,16 @@ Create a function to find the longest string from a given array of strings.
 
 const findLongest = (arr) => {
 let longestArr;
-
-    
+let length
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    let currentLenght = element.length
+    if(currentLenght > length)
+    {
+        longestArr = element
+    }
+}
+    return longestArr
 }
 
 
@@ -145,18 +153,113 @@ Types of angles:
     Right angle: An 90 degree angle.
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
+    */
+const typeOfAngel = (degrees) => {
+    if(degrees < 90){
+        return "acute"
+    }else if(degrees === 90){
+        return "right"
+    }else if(degrees < 180){
+        return "btuse"
+    }else if(degrees === 180){
+        return "straight"
+    }
+}
+
+
+    /*
 13)
 Create a function to find the index of the greatest element of a given array of integers
+*/
+const findIndexOfGreates = (ar) => {
+    let greatest = Integer.MAX_VALUE + 1
+    let indexOfGreatest = 0;
+for (let index = 0; index < ar.length; index++) {
+    const element = ar[index];
+    if(element > greatest){
+        greatest = element
+        indexOfGreatest = index
+    }
+}
+return indexOfGreatest
+}
+
+/*
 14)
 Create a function to get the largest even number from an array of integers.
+*/
+const getLargestEvenNum = (arr) => {
+    let greatest = Integer.MAX_VALUE + 1
+    for (let index = 0; index < ar.length; index++) {
+        const element = ar[index];
+        if(element / 2 === 0){
+         if(element > greatest){
+             greatest = element
+         }
+        }
+    }
+    return element
+}
+
+
+/*
 15)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+*/
+
+const sumOfTwo2 = (a,b) => {
+    if(a === 50){
+        return true
+    }else if(b === 50){
+        return true
+    }else if(a+b === 50){
+        return true
+    }
+}
+
+/*
 16)
 Create a function to check from two given integers, whether one is positive and another one is negative.
+*/
+const onePlusOneMiuns = (a,b) => {
+    if(a < 0 && b >0)
+    {
+        return true
+    }else if(a > 0 && b < 0){
+return true
+    }
+}
+
+/*
 17)
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+*/
+const upFirstThree = (str) => {
+    for (let i = 0; i < 3; i++) {
+        str[i].toUpperCase();
+    }
+    return str
+}
+
+/*
 18)
+
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+*/
+const sumOfTwo = (a,b) => {
+    let sum = a+b
+    if(sum >= 50 && sum <= 80){
+        return 65
+    }else{
+        return 80
+    }
+}
+
+/*
+
+
+
+
 19)
 Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
 If the number has 3 as a factor, output 'Diego'.
